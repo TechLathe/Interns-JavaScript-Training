@@ -53,6 +53,20 @@ conString += "\nThis is on new line";
 console.log(conString);
 
 //using variables
-var str1 = "Hello. ";
+var str1 = "Hello. ";s
 var str2 = "How are you?"
+var str3="\nIm fine.";
+str2+=str3;
 console.log(str1+str2);
+
+console.log(str3.length); //Returns the number of characters in the string
+
+console.log(str3[1]); //Returns the character at index 1 but index start from 0
+
+var lang = "CavaScript";
+lang[0]="J";            // here individual character can not be changes
+console.log(lang);
+lang = "JavaScript";    //Complete string can be change
+console.log(lang);
+
+console.log("Last Character in '"+lang+"' is '"+lang[lang.length-1]+"'");
