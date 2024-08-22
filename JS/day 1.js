@@ -2,7 +2,7 @@
 var a=9;
 /* (multiline code)*/
 var b=6; //declare ,intialize and assign 
-let a=7;//let used insted of var if we have to use within the scope 
+let y=7;//let used insted of var if we have to use within the scope 
 console.log(a)//to display output 
 var f;//uninitialize var means any values can be assigned
 //js is case sensitive lunguage it gives reference error
@@ -17,10 +17,10 @@ var division=70/35;
 console.log(division)
 
 var e=5;
-var ++;
+e ++;
 console.log(e)//increment
 var e=5;
-var --;
+e --;
 console.log(e)//decrement
 
 //decimal operations
