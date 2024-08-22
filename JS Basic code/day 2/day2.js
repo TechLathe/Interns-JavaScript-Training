@@ -89,3 +89,17 @@ var str13 = "Jello"
 str13[0] = "h"; // Error
 str13 = "Hello"
 console.log(str13);
+
+var str14 = "India"
+str15 = (str14[str14.length-1]);
+console.log(str15);
+
+
+// Writing a function in the JS
+
+function myFunction(str16,str17,str18,str19){
+    var schedule = ""
+    schedule += "I " + str16 + " " + str17 + " " + str18 +" " + str19
+    return schedule
+}
+console.log(myFunction("go","to","college","everyday"))
