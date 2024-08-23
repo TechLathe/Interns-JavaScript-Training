@@ -1,7 +1,5 @@
 //Day 1(in line comment)
-var a=9;
-/* (multiline code)*/
-var b=6; //declare ,intialize and assign 
+var a=9;/* (multiline code)*/var b=6; //declare ,intialize and assign 
 let y=7;//let used insted of var if we have to use within the scope 
 console.log(a)//to display output 
 var f;//uninitialize var means any values can be assigned
