@@ -42,3 +42,14 @@ console.log("After: "+ JSON.stringify(testarr))
 function welcome(){
     return true;
 }
+
+// EQUAOLITY OPERATOR
+
+function testequal(val){ 
+    if(val === 10){
+        return "equal"
+    }
+    return "not equal"
+}
+
+console.log(testequal(10))
