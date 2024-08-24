@@ -1,7 +1,5 @@
 //Day 1(in line comment)
-var a=9;
-/* (multiline code)*/
-var b=6; //declare ,intialize and assign 
+var a=9;/* (multiline code)*/var b=6; //declare ,intialize and assign 
 let y=7;//let used insted of var if we have to use within the scope 
 console.log(a)//to display output 
 var f;//uninitialize var means any values can be assigned
@@ -17,10 +15,10 @@ var division=70/35;
 console.log(division)
 
 var e=5;
-e ++;
+e++;
 console.log(e)//increment
 var e=5;
-e --;
+e--;
 console.log(e)//decrement
 
 //decimal operations
@@ -52,7 +50,7 @@ console.log(fname)
 
 //escaping literals 
 var intro='hello "purva" this side';// used single quote for escaping literals
-var intro="hello/"purva"/ this side";// secomd method to use
+var intro="hello/"purva/" this side";// secomd method to use
 
 //plus operator
 var fname="purva" +"ghatage";
