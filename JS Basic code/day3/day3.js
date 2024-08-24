@@ -73,3 +73,4 @@ function fun1(){
     x = 10; // If we declare the variable with these type then it will have global scope and can be accesed from anywhere
     var z = 10 // these z have local scope becuase of it is been declared using var datatype
 }
+
