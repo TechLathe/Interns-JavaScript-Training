@@ -49,3 +49,16 @@ if(dataT===100){             // === -> True only for the correct data with DataT
 }else{
     console.log("Better luck next time");
 }
+
+function testGreaterThan(val){
+    if (val >= 100){
+        return "100 or Over 100";
+    }
+    if (val > 10){
+        return "Over 10";
+    }
+
+    return "10 or Under";
+}
+
+console.log(testGreaterThan(10));
