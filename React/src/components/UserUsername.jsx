@@ -1,10 +1,9 @@
 import React from "react"
+import styles from "./styles.module.css";
 export function UserUsername(props){
     return  (
         <React.Fragment>
-            <b style={{
-                fontSize: "20px"
-            }}>Username : </b>
+            <b className={styles.username}>Username : </b>
             <span>{props.username}</span>
             <br></br>
         </React.Fragment>
