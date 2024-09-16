@@ -1,12 +1,10 @@
-import {register} from "./register";
-import {login}from "./login";
+import {useeffect} from "react";
 export default function application(){
-    window.addeventlistener("resize",(e)=>{
-        console.log(window.innerHeight.window.innerwidth);
-    });
-    return (<div>
-        <register/>
-
-    </div>;
-    );
-} 
+    const [toggle,setoggle] =usestate(false);
+ return (<div>
+    <button onClick={() => settoggle((currentstate)=> !currentstate)}>
+        toggle
+    </button>
+    {toggle && <loginform/>}
+ </div>);
+}
