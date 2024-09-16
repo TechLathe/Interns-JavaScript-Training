@@ -1,9 +1,34 @@
-import { UserProfile } from "./components/UserProfile"
+import { LoginForm } from "./components/LoginForm";
+import { RegisterForm } from "./components/RegisterForm";
+import { UserDetails } from "./components/UserDetails";
+import { UserProfile } from "./components/UserProfile";
+
 export default function App() {
+
+    window.addEventListener('resize', (e) => {
+        console.log(window.innerHeight, window.innerWidth);
+    })
 
     const callme = () => {
 
     }
+
+    const isAuthorized = false;
+
+    //return (isAuthorized?<div><h1>Welcome, User!</h1></div>:<div><h1>You are Not Login!</h1></div>)
+
+    if (isAuthorized) {
+        return (
+            <div>
+                <h1>Welcome, User!</h1>
+            </div>
+        );
+    }
+    return (<div>
+        {/* <h1>You are Not Login!</h1> */}
+        {/* <LoginForm/> */}
+        <RegisterForm />
+    </div>);
 
     const mockUsers = [
         {
@@ -25,20 +50,11 @@ export default function App() {
                 username="Bob"
                 callme={callme} />
             {mockUsers.map((user) => {
-                return (<div key={user.id}>
-                    <br/>
-                    <b>ID: </b>
-                    <span>{user.id}</span>
-                    <br />
-                    <b>Username: </b>
-                    <span>{user.username}</span>
-                    <br />
-                    <b>Email: </b>
-                    <span>{user.email}</span>
-                    <br />
-                </div>
+                return (
+                    <UserDetails key={user.id} user={user} />
                 );
             })}
+
         </div>
     )
 }
