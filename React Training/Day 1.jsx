@@ -1,8 +1,18 @@
-import React from "react";// react is JS library and also the framework thats why we are importing react
-import ReactDOM from "react-dom/100";
-import application from './application';//import the jsx file from another
-ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<application/>
-	</React.StrictMode>
-);
+import {postcontainer} from "./postcontainer";
+import {usercontext} from "./usercontext";
+export default function application(){
+	return(
+		<usercontext.provider 
+		value={{
+			id:1,
+			username:"a",
+			email:"a@gmil.com",
+			displayname:"A",
+		
+		}}>
+		<div>
+			<postcontainer />
+		</div>
+		</usercontext.provider>
+	);
+}  
