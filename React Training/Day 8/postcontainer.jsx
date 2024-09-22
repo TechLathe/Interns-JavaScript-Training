@@ -3,6 +3,8 @@ import {postcontainer } from "./postcontainer";
 import{usercontext} from "./context/usercontext";
 
 export function postcontainer(){
+    const [userdata,setuserdata]=usestate({})
+    return(
     const [data,setdata] =usestate ("hello world");
     const usercontextdata=usercontext(usercontext);
 

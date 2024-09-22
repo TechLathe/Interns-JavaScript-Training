@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        "use strict" // used to to take polynomails seriously
+        let b = 'this is me'
+        let a= "hii" //can be used only once using one variablr
+        const c = 45; // defining the constant
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    function hello(){
+        console.log("hii purva this side");
+        console.log(this)
+    }
+    document.addEventListener("click",function click() {  
+        console.log("clicked");
+        alert("hello")
+        let conf = confirm ("are u okay ?");
+        console.log (conf);       
+    }) /// by using this function we get alert on new things
+    let arr = (number) =>{
+        console.log ("the number is" + this)
+    } 
+    arr();// arrow function gives us object window
+    setTimeout(() => {
+        console.log("wahhhhhhhhh")
+    }, 5000);
+    console.log("woww, this is working")// it is a callback function
+    </script>
+
+</head>
+<body>
+    hiiiiii purva this side
+</body>
+</html>
