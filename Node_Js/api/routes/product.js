@@ -1,46 +1,46 @@
 const express = require('express')
 const router = express.Router();
 
-router.get('/',(req,res,next)=>{
+router.get('/', (req, res, next) => {
     res.status(200).json({
-        message:"Handling Get request to products"
+        message: "Handling Get request to products"
     })
-}); 
+});
 
-router.post('/',(req,res,next)=>{
+router.post('/', (req, res, next) => {
     const product = {
-        name : req.body.name,
-        price : req.bodu.price
+        name: req.body.name,
+        price: req.body.price
     };
     res.status(201).json({
-        message:"Handling Post request to products",
-        createdProduct : product
+        message: "Handling Post request to products",
+        createdProduct: product
     })
-}); 
+});
 
-router.get('/:productId',(req,res,next)=>{
+router.get('/:productId', (req, res, next) => {
     const id = req.params.productId;
-    if(id === 'special'){
+    if (id === 'special') {
         res.status(200).json({
-            message : 'You discovered the special ID ',
-            id:id
+            message: 'You discovered the special ID ',
+            id: id
         });
-    }else{
+    } else {
         res.status(200).json({
             message: 'You passed an ID'
         })
     }
 });
 
-router.patch('/:productId',(req,res,next)=>{
+router.patch('/:productId', (req, res, next) => {
     res.status(200).json({
-        message:"Updated product"
+        message: "Updated product"
     })
 });
 
-router.delete('/:productId',(req,res,next)=>{
+router.delete('/:productId', (req, res, next) => {
     res.status(200).json({
-        message:"Deleted product"
+        message: "Deleted product"
     })
 });
 
