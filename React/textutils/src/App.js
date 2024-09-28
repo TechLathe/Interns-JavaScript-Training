@@ -32,7 +32,7 @@ function App() {
             </ul>
           </li>
           <li classname="nav-item">
-            <a classname="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a classname="nav-link disabled" aria-disabled="true" href="/" > Disabled</a>
           </li>
         </ul>
         <form classname="d-flex" role="search">
