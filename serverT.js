@@ -3,31 +3,29 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-// Connect to MongoDB
+
 mongoose.connect('mongodb://localhost/testdb', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Define the user schema and model
 const userSchema = new mongoose.Schema({
   name: String,
   pass: String
 });
 const User = mongoose.model('User', userSchema);
 
-// Middleware to parse JSON bodies
+
 app.use(bodyParser.json());
 
-// Login endpoint
+
 app.post('/login', (req, res) => {
   const { name, pass } = req.body;
 
-  // Find user by name
   User.findOne({ name }, (err, foundUser) => {
     if (err) {
-      res.status(500).send({ msg: 'Error occurred' });
+      res.status(500).send({ msg: 'Haker Bachaooo!!' });
     } else if (!foundUser || foundUser.pass !== pass) {
-      res.status(401).send({ msg: 'Invalid credentials' });
+      res.status(401).send({ msg: 'Shanti se password daaal.' });
     } else {
-      res.send({ msg: 'Login successful' });
+      res.send({ msg: 'Sahi aadmi hai' });
     }
   });
 });
