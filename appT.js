@@ -1,22 +1,22 @@
-const apiUrl = 'http://localhost:3000'; // Simplified base API URL
+const apiUrl = 'http://localhost:3000'; 
 
 async function login() {
-  const name = document.getElementById('username').value;  // Changed 'username' to 'name'
-  const pass = document.getElementById('password').value;  // Changed 'password' to 'pass'
+  const name = document.getElementById('username').value;  
+  const pass = document.getElementById('password').value;  
 
   try {
     const response = await fetch(`${apiUrl}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, pass })  // Sending data with simplified keys
+      body: JSON.stringify({ name, pass })  
     });
 
     const data = await response.json();
     if (response.ok) {
-      console.log('Login successful!');
-      // You can add more actions here, like redirecting to another page
+      console.log('Sahi aadmi hai yeh ');
+      
     } else {
-      console.error('Login failed:', data.msg);  // Changed 'message' to 'msg' to match backend
+      console.error('Heker hai bhai heker hai', data.msg);  
     }
   } catch (error) {
     console.error('Error:', error);
