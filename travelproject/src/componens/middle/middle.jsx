@@ -1,9 +1,9 @@
-import React from 'react'
-import "./middle.css"
+import React from 'react';
+import "./middle.css";
 
 const middle =() => {
     return (
-        <div></div>
+        <div>middle</div>
     )
 }
 export default middle

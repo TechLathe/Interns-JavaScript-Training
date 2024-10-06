@@ -1,10 +1,20 @@
-import './App.css'
-
+import './App.css';
+import navbar from './components/Navbar/navbar';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <div></div>
+   <div>
+    <navbar/>
+    <home/>
+    <middle/>
+    <destination/>
+    <portfolio/>
+    <review/>
+    <questions/>
+    <subscribe/>
+    <footer/>
+   </div>
   )
 }
 
