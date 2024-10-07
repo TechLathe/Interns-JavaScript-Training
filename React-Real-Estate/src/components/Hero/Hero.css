@@ -2,18 +2,28 @@
     color: white;
     position: relative;
     padding-bottom: 2rem;
-    background-color: var(--black);
+
 }
 
 .hero-container {
+    display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    /* Ensures left and right content are on opposite sides */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    gap: 2rem;
+    /* Adds spacing between left and right sections */
+    flex-wrap: nowrap;
+    /* Prevents the content from wrapping */
 }
 
-
-/*Left Side*/
+/* Left Side */
 .hero-left {
     gap: 3rem;
+    flex: 1;
+    /* Allows the left side to take up available space */
+    max-width: 50%;
+    /* Ensures left side doesn't take more than 50% of space */
 }
 
 .hero-title {
@@ -44,9 +54,37 @@
     border: 3px solid rgba(120, 120, 120, 0374);
     padding: 0.5rem 1rem;
     justify-content: space-between;
+    width: 100%;
 }
 
-/*Right Side*/
+.search-bar>input {
+    border: none;
+    outline: none;
+}
+
+.stats {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.stat>:nth-child(1) {
+    font-size: 2rem;
+}
+
+.stat>:nth-child(1)>:last-child {
+    color: orange;
+}
+
+/* Right Side */
+.hero-right {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the image to the right */
+    flex: 1;
+    /* Allows the right side to take up available space */
+    max-width: 50%;
+    /* Ensures right side doesn't take more than 50% of space */
+}
 
 .image-container {
     width: 30rem;
@@ -59,4 +97,19 @@
 .image-container>img {
     width: 100%;
     height: 100%;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        /* Stacks the content vertically */
+        align-items: center;
+        /* Centers content on smaller screens */
+    }
+
+    .hero-right {
+        justify-content: center;
+        margin-top: 2rem;
+    }
 }
