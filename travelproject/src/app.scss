@@ -94,4 +94,6 @@ img,video{
 }
 ::-webkit-scrollbar-thumb{
     width: 10px;
+    background :var(--primaryColor);
+    border-radius: var(--borderRadius);
 }

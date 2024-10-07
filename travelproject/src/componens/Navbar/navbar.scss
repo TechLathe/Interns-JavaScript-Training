@@ -1,0 +1,98 @@
+.navBarsection{
+    .header{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+        .logoDiv{
+            .logo{
+                color: var(--whiteColor);
+                font-weight: 500;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                .icon{
+                    color: var(--PrimaryColor);
+                    font-size: 25px;
+                }
+            }
+        }
+        @media screen and ( max-width:768px) 
+        {
+            .navbar{
+                background:var(--greyBg);
+                position: absolute;
+                height: max-content;
+                padding: 1rem;
+                width:100%;
+                top: 0;
+                left: -500%;
+                box-shadow: 0.2px 4px rgba(209,209,209,0.904);
+                transition: .5s ease;
+                z-index: 1000;
+
+                .navlists{
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    margin: auto;
+                    .navitem{
+                        padding: 1 rem 0;
+                        
+                        .navItem{
+                            padding: 1 rem 0;
+                            .navLink{
+                                color: var(--texxtColor);
+                                font-size: .9 rem;
+                                font-weight: 600;
+                                &:hover{
+                                    color: var(--PrimaryColor);
+                                }
+                            }
+                        }
+                    } 
+                    .headerBtns{
+                          flex-direction: column;
+                          .btn{
+                            margin-top: 1 rem;
+                            a{
+                                font-weight: 600;
+                                &:hover{
+                                color: var(--whiteColor);
+                                }
+                            }
+                          }  .loginBtn{
+                            background: none;
+                            border: 1 px solid var(--PrimaryColor);
+                            a{
+                                color: var(--PrimaryColor);
+                            }
+                            &:hover{
+                                background: var(--HoverColor);
+                                a{
+                                    color:var(--whiteColor)
+                                }
+                            }
+                          }
+
+                    }
+                }
+                .closeNavbar{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.5 rem;
+                    color: var(--PrimaryColor);
+                    &:hover .icons{
+                        color: var(--HoverColor);
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
