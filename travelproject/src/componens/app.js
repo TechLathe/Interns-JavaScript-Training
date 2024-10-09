@@ -9,7 +9,14 @@ import offer from './componens/offers/offer';
 import popular from './componens/popular/popular';
 const app =() => {
     return{
-        
+        <>
+        <navbar/>
+        <home/>
+        <popular/>
+        <offer/>
+        <about/>
+        <footer/>
+        </>
 
     }
 }
